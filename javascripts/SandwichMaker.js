@@ -1,3 +1,5 @@
+"use strict"
+
 var SandwichMaker = (function() {
 
   // Private variable to store the price
@@ -7,6 +9,8 @@ var SandwichMaker = (function() {
   return {
     addTopping: function(toppingPrice) {
       totalPrice += toppingPrice;
+      console.log("The total price is now: " + totalPrice);
+      document.getElementById("finalSandwich").innerHTML = `<h2>The total price is now:` + totalPrice; '</h2>';
     }
   };
 })();
